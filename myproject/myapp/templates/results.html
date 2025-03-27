@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="{% static 'result.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Quiz Results</h1>
+        </div>
+        <div class="result-box">
+            <!-- <div class="quiz-id">
+                <span>Quiz Topic:</span> <span id="quiz-topic">{{ page }}</span>
+            </div> -->
+            <div class="quiz-id">
+                <span>Username:</span> <span id="quiz-topic">{{ request.session.username }}</span>
+            </div>
+            <div class="score">
+                <span>Score:</span> <span id="score-number">{{ correct_count }} / {{ total_questions }}</span>
+            </div>
+            <div class="average-score">
+                <span>Average Score:</span> <span id="average-score">{{ average_score }}%</span>
+            </div>
+            <div class="buttons">
+                <button class="feedback-button">Give Feedback</button>
+                <a href="{% url 'quiz' %}" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block;">Take Quiz Again</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gk Genius Register</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+    <div class="signin">
+        <form action="/register" method="POST" class="frm">
+            {% csrf_token %} 
+            <div class="admin1">
+                <h1 class="heading">
+                  <span class="fs-1"></span>   Register
+                </h1>
+            {% if messages %}
+                {% for i in messages %}
+                    <p style="color: red;">{{ i }}</p>
+                {% endfor %}
+            {% endif %}
+                <div class="input">
+                    <!-- <input type="text" id="name" name="userid" placeholder="Enter Your Userid" required="" class="username"> -->
+                    <input type="text" id="name" name="username" placeholder="Enter Your Username" required="" class="username">
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required="" class="username">
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required="" class="username">
+                    <input type="password" id="password" name="confirm_password" placeholder="confirm Password" required="" class="username">
+                </div>
+                <div class="buttontag">
+                    <button type="submit" class="btn-primary fs-3">Signup</button>
+                </div>
+                <div class="otherfields">
+                    <a href="/login"><span class="sp">Already have a account.</span> Login?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body{
+    background-image: url(bg2.jpg);
+    background-size: cover;
+}
+h1{
+    font-size: 70px;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+button{
+    margin-left: 90px;
+    margin-top: 30px;
+    width: 250px;
+    height: 100px;
+    font-size: 35px;
+    color: white;
+    border-radius: 70px;
+}
+.category-container2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.go{
+    margin-left: 90%;
+    text-decoration: none;
+    font-size: 30px;
+    width: 90px;
+    height: 50px;
+    padding: 10px;
+    color:black;
+    background-color:rgb(221, 209, 209);
+    border-radius: 10px;
+    border-color: black;
+}

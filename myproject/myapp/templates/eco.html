@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economics Quiz</title>
+    <link rel="stylesheet" href="{% static 'eco.css' %}"> 
+
+</head>
+<body>
+    <h1>Economics Quiz</h1>
+
+    <!-- Timer Display -->
+    <div id="timer" style="font-size: 20px; color: red; font-weight: bold;">
+        Time Left: <span id="countdown"></span>
+    </div>
+
+    <form id="quiz-form" method="POST" action="{% url 'quiz_submission' %}">
+        {% csrf_token %}
+        
+        {% for question in questions %}
+            <fieldset>
+                <legend><h3>{{ question.text }}</h3></legend>
+                {% for option in question.options.all %}
+                    <label>
+                        <input type="radio" name="question_{{ question.id }}" value="{{ option.id }}" required>
+                        {{ option.text }}
+                    </label><br>
+                {% endfor %}
+            </fieldset>
+            <br>
+        {% empty %}
+            <p>No questions available for this quiz.</p>
+        {% endfor %}
+        
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+<script>
+    let timeLeft = 900; // 15 minutes
+
+
+    function startTimer() {
+        let countdownElement = document.getElementById("countdown");
+
+        function updateTimer() {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            countdownElement.textContent = minutes + "m " + seconds + "s";
+
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                alert("Time is up! Your answers will be submitted automatically.");
+                document.getElementById("quiz-form").submit(); // Auto-submit the form
+            }
+            timeLeft--;
+        }
+
+        updateTimer();
+        let timerInterval = setInterval(updateTimer, 1000);
+    }
+
+    document.addEventListener("DOMContentLoaded", startTimer);
+</script>
+</html>

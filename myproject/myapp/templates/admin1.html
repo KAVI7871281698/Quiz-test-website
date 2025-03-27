@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'admin.css' %}">
+</head>
+<body>
+    <div class="container1">
+        <h1>Admin Dashboard</h1>
+        <div class="admin-id">
+            <label for="admin-id">Admin ID:</label>
+            <input type="text" id="admin-id" value="20001" class="id-input" disabled><br>
+        </div>
+        <div class="admin-name">
+            <label for="admin-name">Admin Name:</label>
+            <input type="text" id="admin-name" value="Sathana" class="name-input" disabled>
+        </div>
+
+        <div class="target-section">
+            <label for="target" class="target-name">Target:</label>
+            <select id="target" class="target-category">
+                <option value="category">Category</option>
+                <option value="question">Question</option>
+            </select>
+        </div>
+
+        <div class="action-type-section">
+            <label for="action-type" class="action-type-name">Action Type:</label>
+            <select id="action-type" class="action-category">
+                <option value="add">Add</option>
+                <option value="edit">Edit</option>
+                <option value="delete">Delete</option>
+            </select>
+        </div>
+
+       
+
+        
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

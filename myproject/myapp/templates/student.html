@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{% static 'student.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1><u>Student Dashboard</u></h1>
+        <a href="/quiz"><button  class="quiz">Take a Quiz</button></a><br>
+        <a href="/per"><button  class="performance">View Performance</button></a><br>
+        <a href="/out"><button id="logout-btn" class="logout">Logout</button></a>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
+

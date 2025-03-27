@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Genius Performance</title>
+    <link rel="stylesheet" href="{% static 'per.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>GK Genius - Performance</h1>
+        </div>
+        <div class="performance-box">
+            <!-- <div class="performance-id">
+                <span>Performance ID:</span> <span id="performance-number">[Auto Generated]</span>
+            </div> -->
+            <div class="user-id">
+                <span>User Email:</span> <span id="user-email">{{ request.session.email }}</span>
+            </div>
+            <div class="user-id">
+                <span>User Name:</span> <span id="user-email">{{ request.session.username }}</span>
+            </div>
+            <div class="quiz-id">
+                <span>Total Questions Attend:</span> <span id="quiz-attempts">{{ total_attempts }}</span>
+            </div>
+            <div class="average-score">
+                <span>Average Score:</span> <span id="average-score-number">{{ average_score }}%</span>
+            </div>
+            <div class="best-score">
+                <span>Best Score:</span> <span id="best-score-number">{{ correct_answers }} / 90</span>
+            </div>
+            <div class="buttons">
+                <a href="/student">
+                    <button class="back-button">Back</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

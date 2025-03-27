@@ -1,0 +1,64 @@
+body{
+    background-image:url(img/bg1.jpg);
+    background-color: black;
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aquamarine;
+    background-size: cover;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    height: 70%;
+    margin-top: 50px;
+    background-color: rgb(20, 225, 225);
+    background-size: cover;
+}
+
+
+h1{
+    margin-bottom: 60px;
+    font-size: 54px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 300px;
+    height: 80px;
+}
+
+.logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}

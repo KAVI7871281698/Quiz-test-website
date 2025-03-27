@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+</head>
+<body>
+    <h2>Quiz Results</h2>
+    
+    <p><strong>User Email:</strong> {{ user_email }}</p>
+    <p><strong>Total Questions:</strong> {{ total_questions }}</p>
+    <p><strong>Correct Answers:</strong> {{ correct_count }}</p>
+    <p><strong>Average Score:</strong> {{ average_score }}%</p>
+    
+    <br>
+    <a href="{% url 'quiz_form' %}">Take Quiz Again</a>
+</body>
+</html>

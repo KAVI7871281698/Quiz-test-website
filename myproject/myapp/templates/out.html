@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Page</title>
+    <link rel="stylesheet" href="{% static 'out.css' %}">
+</head>
+<style>
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Are you sure you<br> want to log out?</h1>
+        <div class="buttons">
+            <button class="logout-btn"><a href="/loggout">Logout</a></button>
+            <button class="logout-btn"><a href="/student">cancel</a></button>
+        </div>
+    </div>
+</body>
+</html>

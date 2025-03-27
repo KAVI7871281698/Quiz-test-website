@@ -1,0 +1,55 @@
+body{
+    background-image:url(BG.jpg);
+    background-size:cover;
+}
+.signin{
+    text-align: center;
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 490px;
+    width: 400px;
+    margin-left: 400px;
+    background-color: rgb(240, 254, 255);
+}
+.heading{
+    padding: 20px;
+    color:blue;
+}
+.username{
+    margin-bottom: 20px;
+    width: 80%;
+    height: 30px;
+    gap: 10px;
+    font-size: 15px;
+}
+.password{
+    /* margin-bottom: 10px; */
+    width: 80%;
+    height: 30px;
+    font-size: 15px;
+}
+.buttontag{
+    margin-top: 20px;
+}
+button{
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0, 115, 255, 0.943);
+    color:wheat;
+    font-size: large;
+    border-radius: 20px;
+    /* border-radius: 100px; */
+}
+a{
+    text-decoration: none;
+    font-size:medium;
+    color: blue;
+}
+.otherfields{
+    margin-top: 10px;
+    gap: 20px;
+}
+.sp{
+    color: black;
+}

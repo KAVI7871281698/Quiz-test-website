@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Genius Login</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="signin">
+        <form action="/login" method="POST" class="frm">
+            {% csrf_token %} 
+            <div class="admin1">
+                <h1 class="heading">
+                  <span class="fs-1"></span>LOGIN
+                </h1>
+            {% if messages %}
+                {% for i in messages %}
+                    <p style="color: red;">{{ i }}</p>
+                {% endfor %}
+            {% endif %}
+                <div class="input">
+                    <input type="email" id="name" name="email" placeholder="Enter Your Email" required="" class="username">
+                    <input type="password" id="pwd" name="password" placeholder="Enter Your Password" required="" class="password">
+               </div>
+                <div class="buttontag">
+                    <button type="submit" class="btn-primary fs-3">Login</button>
+                </div>
+                <div class="otherfields">
+                    <a href="/register"><span class="sp">Don't have a account.</span> Register Now?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

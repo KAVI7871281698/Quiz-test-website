@@ -1,0 +1,88 @@
+body{
+    background-image:url(bg2.jpg);
+    background-color: black;
+    color: white;
+}
+.quiz-info{
+    display: flex;
+    gap: 20px;
+}
+.details{
+    display: flex;
+    gap: 30px;
+    margin-left: 30px;
+}
+.category{
+    margin-left: 20px;
+}
+.total{
+    font-size: 15px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+h4{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+    /* color: orangered; */
+}
+.eco{
+    font-size: x-large;
+}
+.gk{
+    font-size: x-large;
+}
+h2{
+    margin-left: 20px;
+    font-size: 30px;
+    color: orangered;
+    font-family: 'Courier New', Courier, monospace;
+}
+.content{
+    font-size: 25px;
+    margin-left: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.questions{
+    font-size: x-large;
+    margin-left: 170px;
+    margin-bottom: 30px;
+}
+.navigation{
+    margin-left: 50px;
+}
+button{
+    margin-left: 70px;
+    width: 200px;
+    height: 50px;
+    font-size: x-large;
+}
+.nav-btn1{
+    background-color: red;
+    color: white;
+}
+.nav-btn2{
+    background-color: yellow;
+    color: black;
+}
+.nav-btn3{
+    background-color: green;
+    color: white;
+}
+.content2{
+    width: 380px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-left: 350px;
+    padding: 10px;
+    background-color: orangered;
+    color: white;
+}
+.box{
+    color: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+

@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Form</title>
+</head>
+<body>
+    <h2>Quiz</h2>
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" action="{% url 'quiz_submission' %}">
+        {% csrf_token %}
+        
+        {% for question in questions %}
+            <fieldset>
+                <legend><h3>{{ question.text }}</h3></legend>
+                {% for option in question.options.all %}
+                    <label>
+                        <input type="radio" name="question_{{ question.id }}" value="{{ option.id }}" required>
+                        {{ option.text }}
+                    </label><br>
+                {% endfor %}
+            </fieldset>
+            <br>
+        {% empty %}
+            <p>No questions available for this quiz.</p>
+        {% endfor %}
+        
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

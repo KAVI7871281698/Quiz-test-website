@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ topic|title }} Quiz</title>
+    <link rel="stylesheet" href="{% static 'eco.css' %}"> 
+</head>
+<body>
+    <h1>{{ topic|title }} Quiz</h1>
+    
+    <form method="POST" action="{% url 'submit_quiz' topic %}">
+        {% csrf_token %}
+        
+        {% for question in questions %}
+            <h3>{{ question.text }}</h3>
+            {% for option in question.options.all %}
+                <input type="radio" name="question_{{ question.id }}" value="{{ option.id }}">
+                {{ option.text }}<br>
+            {% endfor %}
+        {% empty %}
+            <p>No questions available for this quiz.</p>
+        {% endfor %}
+        
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
